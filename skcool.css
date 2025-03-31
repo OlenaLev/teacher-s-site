@@ -1,0 +1,184 @@
+/* Основной фон страницы */
+body {
+  background: url("02.jpg") no-repeat center/cover; /* Добавляем фоновое изображение */
+  color: #d4ca37; /* жовтий текст */
+  font-family: Arial, sans-serif;
+}
+
+/* Заголовок с фоном */
+header {
+  text-align: center;
+  background: url("02.jpg") no-repeat center/cover; /* Добавляем фоновое изображение */
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #d4ca37; /* Белый цвет текста */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень для читаемости */
+  position: relative; /* Устанавливаем позиционирование для потомков */
+}
+
+/* Логотип */
+.logo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 150px; /* Размер логотипа */
+  height: 140px;
+}
+/* Стили для основного меню */
+.menu {
+  background-color: #080b36;
+
+  padding: 10px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  position: relative; /* Для выпадающего подменю */
+  margin: 0 15px;
+}
+
+.menu ul li a {
+  color: #d4ca37;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+}
+
+/* Выпадающее подменю */
+.menu ul .submenu {
+  display: none; /* Скрываем подменю по умолчанию */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: url("02.jpg") no-repeat center/cover; /* Добавляем фоновое изображение */
+  border-radius: 10px;
+  padding: 0;
+  min-width: 200px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu ul .submenu li {
+  display: block;
+  text-align: left;
+}
+
+.menu ul .submenu li a {
+  display: block;
+  padding: 10px;
+  color: #d4ca37;
+}
+
+/* Показываем подменю при наведении */
+.menu ul li:hover .submenu {
+  display: block;
+}
+
+.menu ul .submenu li a:hover {
+  color: #080b36; /* Чуть светлее при наведении */
+}
+/* Контейнер для трёх колонок */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 1400px; /* Ограничиваем ширину */
+}
+
+.sidebar {
+  width: 20%; /* Фиксированная ширина */
+  background-color: #080b36;
+  padding: 20px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column; /* Элементы располагаются сверху вниз */
+  align-items: center; /* Центрируем содержимое */
+  text-align: center;
+}
+
+.sidebar-content {
+  width: 100%; /* Контейнер занимает всю ширину боковой панели */
+  .sidebar-text {
+    font-size: 20px; /* Увеличенный размер */
+    font-weight: bold; /* Жирный текст */
+    color: #d4ca37; /* Желтый цвет */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Объёмный эффект */
+    display: flex; /* Выравнивание текста и иконки */
+    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрируем текст */
+    gap: 8px; /* Отступ между текстом и иконкой */
+  }
+}
+.sidebar-button {
+  background: url("02.jpg") no-repeat center/cover; /* Фоновое изображение */
+  color: #d4ca37;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  padding: 12px; /* Чуть больше отступов для объема */
+  border: none;
+  border-radius: 8px; /* Более сглаженные углы */
+  cursor: pointer;
+  width: 100%; /* Растягиваем кнопку на всю ширину */
+  box-sizing: border-box; /* Учитываем padding */
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  /* Тень для объёма */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+  margin-top: 35px; /* Увеличенный отступ между кнопками*/
+}
+
+.sidebar-button:hover {
+  background-color: #ffaa00;
+  transform: scale(1.05); /* Легкое увеличение */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); /* Усиление тени */
+}
+
+/* Основная колонка */
+.content {
+  width: 60%; /* Основная колонка шире */
+  background-color: #080b36;
+
+  color: #333;
+  padding: 20px;
+  min-height: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.content {
+  width: 60%; /* Основная колонка шире */
+  background-color: #080b36;
+  color: #ffffff;
+  padding: 20px;
+  min-height: 400px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-left: 5px solid rgb(40, 35, 107); /* Левый желтый бортик */
+  border-right: 5px solid rgb(73, 14, 68); /* Правый желтый бортик */
+}
+.content img {
+  display: block;
+  max-width: 100%; /* Чтобы не выходило за границы */
+  height: auto; /* Автоматическая высота */
+  margin: 20px auto; /* Центрирование */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Лёгкая тень */
+}
+.content p {
+  color: #d4ca37; /* Белый цвет текста */
+  font-style: italic; /* Курсив */
+  font-size: 26px; /* Умеренный размер шрифта */
+  text-align: center; /* Центрирование текста */
+}
